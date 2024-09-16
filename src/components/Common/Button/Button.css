@@ -1,0 +1,17 @@
+.buttonMainContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.buttonText {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.icon {
+    font-size: 14px;
+}

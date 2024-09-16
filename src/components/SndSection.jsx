@@ -1,7 +1,9 @@
 import React from "react";
 import { styled } from "styled-components";
 import ArrowBtn from "./ArrowBtn";
-import Stats from "./Stats";
+import Button from "./Common/Button/Button";
+import { useNavigate } from "react-router-dom";
+
 
 const Wrap = styled.div`
   height: 80.8vh;
@@ -46,6 +48,12 @@ const Child3 = styled.div`
 `;
 
 const Section = ({ background }) => {
+  let navigate = useNavigate();
+  function onClickHandle() {
+    console.log("ANINIDN")
+    navigate("/createAdd");
+
+  }
   return (
     <Wrap bgimg={background}>
       <Parent style={{ marginLeft: "5rem" }}>
@@ -92,7 +100,8 @@ const Section = ({ background }) => {
             paddingRight: "7rem",
           }}
         >
-          <ArrowBtn label="ENABLE AD" />
+          <Button title={"CREATE"} width={"8rem"} height={"2rem"} onClick={onClickHandle} />
+
         </div>
       </Parent>
       <Parent style={{ marginRight: "5rem" }}>
@@ -139,7 +148,7 @@ const Section = ({ background }) => {
             paddingRight: "7rem",
           }}
         >
-          <ArrowBtn label="CREATE AD" />
+          <Button title={"CREATE"} width={"8rem"} height={"2rem"} onClick={onClickHandle} />
         </div>
       </Parent>
     </Wrap>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { selectCar } from "../features/car/carSlice";
 import { useSelector } from "react-redux";
-import Button from "./Button";
+import Button from "./Common/Button/Button";
 
 // Styled components
 const Container = styled.div`
@@ -122,11 +122,13 @@ const Header = () => {
   const hideBurgerNav = () => {
     setBurgerState(false);
   };
-
+  const onClickHandle = () => {
+    console.log("PRESS")
+  }
   return (
     <Container>
       <a>
-        <img src="/images/adVerse.png" alt="Ads" style={{height:'16px'}}/>
+        <img src="/images/adVerse.png" alt="Ads" style={{ height: '16px' }} />
       </a>
 
       <Menu>
@@ -137,12 +139,11 @@ const Header = () => {
         <p style={{ cursor: "pointer" }}>Support</p>
         <FullWidthp></FullWidthp>
       </Menu>
+      <div>
+        <Button title={"PRICE"} width={"10rem"} height={"2rem"} onClick={onClickHandle} />
+      </div>
 
-      <RightMenu>
-        <Button label="PLANS AND PRICING" />
-      </RightMenu>
-
-      <BurgerNav show={burgerState}>
+      {/* <BurgerNav show={burgerState}>
         <FontAwesomeIcon icon={faX} className="icon" onClick={hideBurgerNav} />
         {cars &&
           cars.map((car, index) => {
@@ -185,7 +186,7 @@ const Header = () => {
         <li>
           <a href="#">Account</a>
         </li>
-      </BurgerNav>
+      </BurgerNav> */}
     </Container>
   );
 };
