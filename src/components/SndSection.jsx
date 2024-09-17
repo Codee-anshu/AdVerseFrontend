@@ -51,7 +51,7 @@ const Section = ({ background }) => {
   let navigate = useNavigate();
   function onClickHandle() {
     console.log("ANINIDN")
-    navigate("/createAdd");
+    navigate("createAdd");
 
   }
   return (

@@ -26,9 +26,49 @@
     bottom: 0;
     left: 0;
     right: 0;
-    width: 250px;
+    width: 500px;
     height: 100px;
     justify-content: center;
     text-align: center;
     margin: auto;
+}
+
+.modalStyle {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 25%;
+    height: 40%;
+    overflow: 'auto';
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.modalContentStyle {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.cardStyle {
+    color: white;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 50px;
+    right: 0;
+    width: 25%;
+    height: 20%;
+    /* overflow: 'auto';
+    margin: auto; */
+    background-color: rgba(157, 65, 65, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
